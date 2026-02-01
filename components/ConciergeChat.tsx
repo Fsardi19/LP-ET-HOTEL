@@ -90,11 +90,11 @@ const ConciergeChat: React.FC = () => {
           )}
         </div>
 
-        {/* WhatsApp Shortcut */}
+        {/* WhatsApp Shortcut - Va a reservas (humano) */}
         <div className="px-4 py-2 bg-brand-pink/10 border-t border-white/5">
-          <a 
-            href={CONTACT_INFO.whatsapp} 
-            target="_blank" 
+          <a
+            href={CONTACT_INFO.whatsappReservas}
+            target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 text-[10px] font-bold uppercase tracking-widest text-brand-pink hover:text-white transition-colors"
           >

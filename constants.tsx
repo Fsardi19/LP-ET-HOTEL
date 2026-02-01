@@ -30,7 +30,11 @@ export const ASSETS = {
 };
 
 // LINKS PRINCIPALES DE RESERVA
-export const WHATSAPP_BOOKING = "https://wa.me/573209306834?text=Hola%2C%20quiero%20reservar%20el%20Coffee%20Tour%20%F0%9F%8C%BF%E2%98%95";
+// WhatsApp para RESERVAS: +57 318 956 5617
+export const WHATSAPP_RESERVAS = "https://wa.me/573189565617?text=Hola%2C%20quiero%20reservar%20el%20Coffee%20Tour%20%F0%9F%8C%BF%E2%98%95";
+
+// WhatsApp para INFO (AI Concierge): +57 320 930 6834
+export const WHATSAPP_INFO = "https://wa.me/573209306834";
 
 // Función para abrir el Concierge AI desde cualquier botón
 export const openConcierge = () => {
@@ -43,11 +47,18 @@ export const CLOUDBEDS_URL = "https://hotels.cloudbeds.com/en/reservation/yB0fEt
 // INFORMACIÓN DE CONTACTO
 export const CONTACT_INFO = {
   email: "reservations@lapalmayeltucan.com",
-  phone: "+573209306834",
-  phoneDisplay: "(+57) 320 930 6834",
+  // Teléfono principal de reservas
+  phone: "+573189565617",
+  phoneDisplay: "(+57) 318 956 5617",
+  // Teléfono de info/AI
+  phoneInfo: "+573209306834",
+  phoneInfoDisplay: "(+57) 320 930 6834",
   address: "Zipacón, Cundinamarca, Colombia",
   googleMaps: "https://maps.app.goo.gl/v8NZcqQDGpFoUfPV7",
-  whatsapp: "https://wa.me/573209306834"
+  // WhatsApp de reservas (humano)
+  whatsappReservas: "https://wa.me/573189565617",
+  // WhatsApp de info (AI)
+  whatsappInfo: "https://wa.me/573209306834"
 };
 
 // REDES SOCIALES
