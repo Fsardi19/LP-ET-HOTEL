@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
-import { NAV_LINKS, openConcierge } from '../constants';
+import { NAV_LINKS, WHATSAPP_RESERVAS } from '../constants';
 import Logo from './Logo';
 
 const Navbar: React.FC = () => {
@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
       scrolled ? 'bg-brand-dark/95 backdrop-blur-xl py-2 sm:py-3 shadow-xl' : 'bg-transparent py-4 sm:py-6 lg:py-8'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
-        <a href="/" className="flex items-center gap-2 sm:gap-3 group" aria-label="Ir al inicio - La Palma & El Tucán">
+        <a href="#hero" className="flex items-center gap-2 sm:gap-3 group" aria-label="Ir al inicio - La Palma & El Tucán">
           <Logo variant="pink" showBadge={false} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 transition-transform group-hover:scale-105" />
           <div className="flex flex-col leading-tight">
             {/* Logo text con colores oficiales de marca */}
@@ -47,14 +47,16 @@ const Navbar: React.FC = () => {
             ))}
           </div>
 
-          <button
-            onClick={openConcierge}
-            className="hidden sm:flex items-center gap-2 bg-brand-pink hover:bg-brand-pink/90 text-white px-4 sm:px-6 py-2.5 sm:py-3 text-[9px] sm:text-[10px] font-bold uppercase tracking-widest transition-all shadow-lg active:scale-95 rounded-lg"
-            aria-label="Reservar Coffee Tour - Hablar con Concierge"
+          <a
+            href={WHATSAPP_RESERVAS}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white px-4 sm:px-6 py-2.5 sm:py-3 text-[9px] sm:text-[10px] font-bold uppercase tracking-widest transition-all shadow-lg active:scale-95 rounded-lg"
+            aria-label="Reservar Coffee Tour por WhatsApp"
           >
             <MessageCircle className="w-4 h-4" />
             Reservar
-          </button>
+          </a>
 
           <button
             className="lg:hidden text-white p-2 -mr-2"
@@ -82,13 +84,16 @@ const Navbar: React.FC = () => {
               {link.label}
             </a>
           ))}
-          <button
-            onClick={() => { openConcierge(); setIsOpen(false); }}
-            className="bg-brand-pink text-white px-6 py-4 sm:py-5 text-center text-xs font-bold uppercase tracking-widest mt-4 active:scale-95 transition-transform rounded-xl flex items-center justify-center gap-2 w-full"
+          <a
+            href={WHATSAPP_RESERVAS}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
+            className="bg-green-600 hover:bg-green-500 text-white px-6 py-4 sm:py-5 text-center text-xs font-bold uppercase tracking-widest mt-4 active:scale-95 transition-transform rounded-xl flex items-center justify-center gap-2 w-full"
           >
             <MessageCircle className="w-5 h-5" />
-            Reservar Ahora
-          </button>
+            Reservar por WhatsApp
+          </a>
         </div>
       </div>
     </nav>
