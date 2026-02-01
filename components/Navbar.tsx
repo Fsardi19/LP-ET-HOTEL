@@ -1,0 +1,88 @@
+
+import React, { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
+import { NAV_LINKS, BOOKING_URL } from '../constants';
+import Logo from './Logo';
+
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      scrolled ? 'bg-brand-dark/95 backdrop-blur-xl py-3 shadow-xl' : 'bg-transparent py-8'
+    }`}>
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <a href="/" className="flex items-center gap-2 group">
+          <Logo variant="pink" className="w-12 h-12 md:w-16 md:h-16 transition-transform group-hover:scale-105" />
+          <div className="flex flex-col">
+            <span className={`text-sm md:text-base font-serif font-bold tracking-tighter text-white`}>
+              LA PALMA & EL TUCÁN
+            </span>
+            <span className="text-[8px] uppercase tracking-[0.4em] text-brand-pink font-bold">Coffee Experience</span>
+          </div>
+        </a>
+
+        <div className="flex items-center gap-10">
+          <div className="hidden lg:flex items-center space-x-10">
+            {NAV_LINKS.map((link) => (
+              <a 
+                key={link.label} 
+                href={link.href} 
+                className={`text-[10px] font-bold transition-colors uppercase tracking-[0.3em] ${scrolled ? 'text-white hover:text-brand-pink' : 'text-white/80 hover:text-white'}`}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          <a 
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:block bg-brand-pink text-white px-8 py-3.5 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-pink transition-all shadow-lg"
+          >
+            Reservar Tour
+          </a>
+
+          <button className="lg:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X /> : <Menu />}
+          </button>
+        </div>
+      </div>
+
+      <div className={`lg:hidden absolute top-full left-0 right-0 bg-brand-dark border-t border-white/5 transition-all duration-300 overflow-hidden ${
+        isOpen ? 'max-h-screen' : 'max-h-0'
+      }`}>
+        <div className="flex flex-col p-10 space-y-8 h-screen">
+          {NAV_LINKS.map((link) => (
+            <a 
+              key={link.label} 
+              href={link.href} 
+              className="text-2xl font-serif text-white hover:text-brand-pink"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
+          <a 
+            href={BOOKING_URL}
+            className="bg-brand-pink text-white px-6 py-5 text-center text-xs font-bold uppercase tracking-widest"
+          >
+            Reservar Ahora
+          </a>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
