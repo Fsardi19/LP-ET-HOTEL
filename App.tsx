@@ -36,7 +36,7 @@ const App: React.FC = () => {
                     <div id="educacion" className="bg-white p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-[2rem] shadow-sm">
                         <h3 className="text-xl sm:text-2xl font-serif mb-3 sm:mb-4">Educación Cafetera</h3>
                         <p className="text-neutral-500 text-sm mb-4 sm:mb-6">Cursos especializados en barismo, cata y procesos de café especial.</p>
-                        <a href={`mailto:${CONTACT_INFO.email}`} className="text-brand-pink font-bold text-[10px] uppercase tracking-widest border-b border-brand-pink pb-1 hover:opacity-80 transition-opacity">Ver Cursos</a>
+                        <a href={`mailto:${CONTACT_INFO.email}?subject=Información sobre cursos de café`} className="text-brand-pink font-bold text-[10px] uppercase tracking-widest border-b border-brand-pink pb-1 hover:opacity-80 transition-opacity">Solicitar Información</a>
                     </div>
                 </div>
             </div>
