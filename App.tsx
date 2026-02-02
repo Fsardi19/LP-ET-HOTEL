@@ -7,7 +7,7 @@ import TourSection from './components/TourSection';
 import LocationSection from './components/LocationSection';
 import ConciergeChat from './components/ConciergeChat';
 import Logo from './components/Logo';
-import { WHATSAPP_RESERVAS, ASSETS, SOCIAL_LINKS, CONTACT_INFO, COFFEE_TOUR_INFO } from './constants';
+import { BOOKING_URL, ASSETS, SOCIAL_LINKS, CONTACT_INFO, COFFEE_TOUR_INFO } from './constants';
 import { MessageCircle } from 'lucide-react';
 
 const App: React.FC = () => {
@@ -75,16 +75,16 @@ const App: React.FC = () => {
 
             <div className="flex flex-col gap-4 justify-center items-center">
               <a
-                href={WHATSAPP_RESERVAS}
+                href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-600 hover:bg-green-500 text-white px-10 sm:px-16 py-5 sm:py-6 font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-3 transition-all shadow-2xl active:scale-95 w-full sm:w-auto rounded-xl"
+                className="bg-[#25D366] hover:bg-[#128C7E] text-white px-10 sm:px-16 py-5 sm:py-6 font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-3 transition-all shadow-2xl active:scale-95 w-full sm:w-auto rounded-xl"
                 aria-label="Reservar Coffee Tour por WhatsApp"
               >
                 <MessageCircle className="w-6 h-6" />
-                Reservar por WhatsApp
+                Reservar por WhatsApp - {COFFEE_TOUR_INFO.price}
               </a>
-              <span className="text-white/50 text-xs">Respuesta inmediata • Todos los días 10:00 AM</span>
+              <span className="text-white/50 text-xs">Respuesta inmediata • {COFFEE_TOUR_INFO.schedule} {COFFEE_TOUR_INFO.time}</span>
             </div>
           </div>
         </section>

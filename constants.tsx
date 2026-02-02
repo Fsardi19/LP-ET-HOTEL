@@ -31,18 +31,21 @@ export const ASSETS = {
 
 // LINKS PRINCIPALES DE RESERVA
 // WhatsApp para RESERVAS: +57 318 956 5617
-export const WHATSAPP_RESERVAS = "https://wa.me/573189565617?text=Hola%2C%20quiero%20reservar%20el%20Coffee%20Tour%20%F0%9F%8C%BF%E2%98%95";
+export const WHATSAPP_RESERVAS = "https://wa.me/573189565617?text=Hola%2C%20quiero%20reservar%20el%20Coffee%20Tour";
 
 // WhatsApp para INFO (AI Concierge): +57 320 930 6834
 export const WHATSAPP_INFO = "https://wa.me/573209306834";
+
+// BOOKING_URL apunta a WhatsApp de reservas (NO Cloudbeds para Coffee Tour)
+export const BOOKING_URL = WHATSAPP_RESERVAS;
+
+// Cloudbeds solo para alojamiento en hotel
+export const CLOUDBEDS_URL = "https://hotels.cloudbeds.com/en/reservation/yB0fEt";
 
 // Función para abrir el Concierge AI desde cualquier botón
 export const openConcierge = () => {
   window.dispatchEvent(new CustomEvent('openConcierge'));
 };
-
-// Cloudbeds solo para alojamiento
-export const CLOUDBEDS_URL = "https://hotels.cloudbeds.com/en/reservation/yB0fEt";
 
 // INFORMACIÓN DE CONTACTO
 export const CONTACT_INFO = {
@@ -79,21 +82,22 @@ export const NAV_LINKS: NavLink[] = [
 
 // INFORMACIÓN DEL COFFEE TOUR
 export const COFFEE_TOUR_INFO = {
-  price: "$492.000 COP",
+  price: "$492.000",
+  priceNote: "COP por persona",
   priceNumber: 492000,
   duration: "~3 horas",
-  schedule: "Todos los días 10:00 AM",
-  minPax: 2,
+  schedule: "Todos los días",
+  time: "10:00 AM",
+  minPeople: 2,
   varieties: ["Gesha", "Sidra", "Mokka", "Java", "Bourbon Amarillo"],
   includes: [
-    "Recorrido guiado por finca cafetera",
+    "Transporte desde Bogotá (mín. 2 personas)",
+    "Recorrido guiado por cafetales",
     "Proceso completo del café",
-    "Degustación profesional de cafés especiales",
-    "Introducción a prácticas regenerativas",
+    "Degustación de 5 variedades premium",
+    "Almuerzo farm-to-table",
     "Bebida de bienvenida",
-    "Almuerzo completo farm-to-table",
-    "Tiempo libre en espacios naturales",
-    "Transporte desde Bogotá (min. 2 pax)",
+    "Tiempo libre en naturaleza",
     "Impuestos incluidos"
   ]
 };
