@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { BOOKING_URL, ASSETS, COFFEE_TOUR_INFO } from '../constants';
-import { ArrowRight, MapPin, Coffee as CoffeeIcon, Clock, Calendar, MessageCircle } from 'lucide-react';
+import { ArrowRight, MapPin, Coffee as CoffeeIcon, Clock, MessageCircle } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -34,14 +34,14 @@ const Hero: React.FC = () => {
               <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">{COFFEE_TOUR_INFO.price}</span>
               <span className="text-white/80 text-xs sm:text-sm ml-2">{COFFEE_TOUR_INFO.priceNote}</span>
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-white/90 text-xs sm:text-sm">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-brand-pink" />
-                <span>{COFFEE_TOUR_INFO.schedule}</span>
-              </div>
+            <div className="flex flex-col gap-2 text-white/90 text-xs sm:text-sm">
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-brand-pink" />
-                <span>{COFFEE_TOUR_INFO.time} | {COFFEE_TOUR_INFO.duration}</span>
+                <span>{COFFEE_TOUR_INFO.schedule} - Salida {COFFEE_TOUR_INFO.time}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-brand-pink" />
+                <span>{COFFEE_TOUR_INFO.departurePoint}</span>
               </div>
             </div>
           </div>

@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
 import { NAV_LINKS, BOOKING_URL } from '../constants';
-import Logo from './Logo';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,16 +20,14 @@ const Navbar: React.FC = () => {
       scrolled ? 'bg-brand-dark/95 backdrop-blur-xl py-2 sm:py-3 shadow-xl' : 'bg-transparent py-4 sm:py-6 lg:py-8'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
-        <a href="#hero" className="flex items-center gap-2 sm:gap-3 group" aria-label="Ir al inicio - La Palma & El Tucán">
-          <Logo variant="pink" showBadge={false} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 transition-transform group-hover:scale-105" />
+        <a href="#hero" className="flex items-center group" aria-label="Ir al inicio - La Palma & El Tucán">
           <div className="flex flex-col leading-tight">
-            {/* Logo text con colores oficiales de marca */}
-            <span className="text-[10px] sm:text-xs md:text-sm font-serif font-bold tracking-tight">
+            <span className="text-sm sm:text-base md:text-lg font-serif font-bold tracking-tight">
               <span className="text-brand-gold">LA PALMA</span>
-              <span className="text-brand-pink mx-0.5">&</span>
+              <span className="text-brand-pink mx-1">&</span>
               <span className="text-brand-gold">EL TUCÁN</span>
             </span>
-            <span className="text-[7px] sm:text-[8px] uppercase tracking-[0.25em] sm:tracking-[0.3em] text-brand-pink font-bold">Coffee Experience</span>
+            <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.25em] sm:tracking-[0.3em] text-brand-pink font-bold">Coffee Experience</span>
           </div>
         </a>
 

@@ -13,12 +13,15 @@ const TourSection: React.FC = () => {
           <p className="text-neutral-600 font-light text-sm sm:text-base">Sumérgete en el mundo de los cafés especiales. Desde la cereza en el árbol hasta la taza perfecta.</p>
 
           {/* PRECIO Y HORARIO REPETIDO */}
-          <div className="mt-6 sm:mt-8 inline-flex flex-wrap items-center justify-center gap-3 sm:gap-4 bg-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl shadow-sm">
-            <span className="text-xl sm:text-2xl font-bold text-brand-pink">{COFFEE_TOUR_INFO.price}</span>
-            <span className="text-neutral-400 hidden sm:inline">|</span>
-            <span className="text-neutral-600 text-sm">{COFFEE_TOUR_INFO.schedule} {COFFEE_TOUR_INFO.time}</span>
-            <span className="text-neutral-400 hidden sm:inline">|</span>
-            <span className="text-neutral-600 text-sm">{COFFEE_TOUR_INFO.duration}</span>
+          <div className="mt-6 sm:mt-8 flex flex-col items-center gap-2 bg-white px-6 sm:px-8 py-4 sm:py-5 rounded-2xl shadow-sm">
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+              <span className="text-xl sm:text-2xl font-bold text-brand-pink">{COFFEE_TOUR_INFO.price}</span>
+              <span className="text-neutral-400 hidden sm:inline">|</span>
+              <span className="text-neutral-600 text-sm">Salida {COFFEE_TOUR_INFO.time}</span>
+              <span className="text-neutral-400 hidden sm:inline">|</span>
+              <span className="text-neutral-600 text-sm">{COFFEE_TOUR_INFO.duration}</span>
+            </div>
+            <span className="text-neutral-500 text-xs">Desde {COFFEE_TOUR_INFO.departurePoint}</span>
           </div>
         </div>
 
