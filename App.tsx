@@ -6,7 +6,7 @@ import Experience from './components/Experience';
 import TourSection from './components/TourSection';
 import LocationSection from './components/LocationSection';
 import ConciergeChat from './components/ConciergeChat';
-import { BOOKING_URL, ASSETS, SOCIAL_LINKS, CONTACT_INFO, COFFEE_TOUR_INFO } from './constants';
+import { BOOKING_URL, CLOUDBEDS_URL, ASSETS, SOCIAL_LINKS, CONTACT_INFO, COFFEE_TOUR_INFO } from './constants';
 import { MessageCircle } from 'lucide-react';
 
 const App: React.FC = () => {
@@ -68,12 +68,12 @@ const App: React.FC = () => {
                   Cabañas privadas inmersas en la naturaleza, desayuno incluido y acceso a todos nuestros espacios naturales.
                 </p>
                 <a
-                  href="https://www.lapalmayeltucanhotel.com"
+                  href={CLOUDBEDS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 bg-brand-pink text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-brand-dark transition-all shadow-lg active:scale-95"
                 >
-                  Ver opciones de alojamiento
+                  Reservar Estadía
                 </a>
               </div>
             </div>

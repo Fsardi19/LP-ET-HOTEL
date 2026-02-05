@@ -36,10 +36,10 @@ export const WHATSAPP_RESERVAS = "https://wa.me/573189565617?text=Hola%2C%20quie
 // WhatsApp para INFO (AI Concierge): +57 320 930 6834
 export const WHATSAPP_INFO = "https://wa.me/573209306834";
 
-// BOOKING_URL apunta a WhatsApp de reservas (NO Cloudbeds para Coffee Tour)
+// BOOKING_URL apunta a WhatsApp de reservas (Coffee Tour)
 export const BOOKING_URL = WHATSAPP_RESERVAS;
 
-// Cloudbeds solo para alojamiento en hotel
+// Cloudbeds para reservas de hospedaje (estadías)
 export const CLOUDBEDS_URL = "https://hotels.cloudbeds.com/en/reservation/yB0fEt";
 
 // Función para abrir el Concierge AI desde cualquier botón
